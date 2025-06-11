@@ -40,3 +40,13 @@ jobs:
     - name: Push Docker Image
       run: docker push ${{ secrets.DOCKER_USERNAME }}/sample08:latest
 
+    # Deploy to Remote Server
+    - name: Setup SSH key
+      uses: webfactory/ssh-agent@v0.9.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Run deploy script on remote server
+      run: |
+        ssh -p 44655 -o StrictHostKeyChecking=no tiger@serveo.net "bash ~/sample08/deploy.sh"
+
