@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Sample08Application {
 	@GetMapping("/")
 	public String hello(){
-		return "06/10: hello 시저 v01";
+		return "06/10: hello 시저 v02";
 	}
 
 	public static void main(String[] args) {
