@@ -48,5 +48,5 @@ jobs:
 
     - name: Run deploy script on remote server
       run: |
-        ssh -p 44655 -o StrictHostKeyChecking=no tiger@serveo.net "bash ~/sample08/deploy.sh"
+        ssh -p 41560 -o StrictHostKeyChecking=no tiger@serveo.net "bash ~/sample08/deploy.sh"
 
